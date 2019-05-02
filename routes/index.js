@@ -42,7 +42,7 @@ router.post('/users', (req, res) => {
     // Push new user into users array
     usersArr.push(newUser);
     res.statusCode = 201;
-    res.send({ message: 'User successfully created!' });
+    res.json({ message: 'User successfully created!' });
 });
 
 router.get('/users/firstname/:firstname', (req, res) => {
