@@ -23,12 +23,12 @@ router.get('/users', (req, res) => {
                 city: response.data.results[0].location.city,
                 email: response.data.results[0].email,
                 cell: response.data.results[0].cell
-            })
+            });
         });
         res.statusCode = 200;
         res.send(usersArr);
     }).catch(err => {
-        console.log(err.message)
+        console.log(err.message);
     });
 });
 
